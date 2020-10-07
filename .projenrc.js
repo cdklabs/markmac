@@ -14,6 +14,4 @@ const project = new TypeScriptProject({
   ],
 });
 
-project.addBuildCommand('cat README.md | node lib/cli.js > README.md')
-
 project.synth();

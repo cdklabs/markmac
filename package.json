@@ -17,7 +17,7 @@
     "projen:upgrade": "yarn upgrade -L projen && CI=\"\" yarn projen",
     "compile": "tsc",
     "watch": "tsc -w",
-    "build": "yarn run test && yarn run compile && yarn run package && cat README.md | node lib/cli.js > README.md",
+    "build": "yarn run test && yarn run compile && yarn run package",
     "package": "rm -fr dist && mkdir -p dist/js && yarn pack && mv *.tgz dist/js/",
     "test": "rm -fr lib/ && jest --passWithNoTests --updateSnapshot && yarn run eslint",
     "test:watch": "jest --watch",
