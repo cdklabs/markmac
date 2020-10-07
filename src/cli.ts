@@ -1,3 +1,3 @@
-import { mdmacro } from '.';
+import { markmac } from '.';
 
-mdmacro().catch(e => console.error(e.stack));
+markmac().catch(e => console.error(e.stack));

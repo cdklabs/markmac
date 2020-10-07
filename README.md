@@ -1,6 +1,6 @@
-# mdmacro
+# markmac
 
-> Embed program outputs in markdown
+> Markdown macros - embed program outputs in markdown
 
 Let's say I have a markdown file `test.md` which looks like this:
 
@@ -20,11 +20,11 @@ This is _just markdown_.
 <!-- </macro> -->
 ```
 
-If I pipe it through `mdmacro`, the macro commands will be executed and their
+If I pipe it through `markmac`, the macro commands will be executed and their
 STDOUT will be embedded between `<macro>` and `</macro>`.
 
 ```console
-$ cat test.md | mdmacro
+$ cat test.md | markmac
 # Hello, World
 
 This is _just markdown_.
@@ -42,7 +42,7 @@ This is _just markdown_.
 <!-- </macro> -->
 ```
 
-`mdmacro` searches for the `<macro>` directives inside your markdown file,
+`markmac` searches for the `<macro>` directives inside your markdown file,
 executes the command in `exec` and substitutes the contents between `<macro>`
 and `</macro>` with STDOUT.
 
@@ -52,7 +52,7 @@ This program is distributed via npm, so it can be installed through `yarn` or
 `npm` or any other supporting client:
 
 ```shell
-npm i -g mdmacro
+npm i -g markmac
 ```
 
 ## License

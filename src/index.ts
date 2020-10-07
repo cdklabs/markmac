@@ -5,7 +5,7 @@ import * as readline from 'readline';
  * Reads markdown with `<!-- <macro exec="COMMAND"> -->` annotations from
  * `input`, expands it by executing `COMMAND` and writes to `output`.
  */
-export async function mdmacro(input: NodeJS.ReadableStream = process.stdin, output: NodeJS.WritableStream = process.stdout) {
+export async function markmac(input: NodeJS.ReadableStream = process.stdin, output: NodeJS.WritableStream = process.stdout) {
   const BEGIN_RE = /^<!-- <macro exec="(.*)"> -->$/;
   const END_RE = /^<!-- <\/macro> -->$/;
 
