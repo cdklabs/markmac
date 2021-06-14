@@ -12,7 +12,7 @@
   "parserOptions": {
     "ecmaVersion": 2018,
     "sourceType": "module",
-    "project": "./tsconfig.jest.json"
+    "project": "./tsconfig.eslint.json"
   },
   "extends": [
     "plugin:import/typescript"
@@ -27,21 +27,19 @@
     "import/resolver": {
       "node": {},
       "typescript": {
-        "directory": "./tsconfig.json"
+        "project": "./tsconfig.eslint.json"
       }
     }
   },
   "ignorePatterns": [
     "*.js",
+    "!.projenrc.js",
     "*.d.ts",
     "node_modules/",
     "*.generated.ts",
     "coverage"
   ],
   "rules": {
-    "@typescript-eslint/no-require-imports": [
-      "error"
-    ],
     "indent": [
       "off"
     ],
@@ -119,12 +117,34 @@
     "@typescript-eslint/member-delimiter-style": [
       "error"
     ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 150,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "quote-props": [
+      "error",
+      "consistent-as-needed"
+    ],
+    "@typescript-eslint/no-require-imports": [
+      "error"
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
         "devDependencies": [
-          "**/build-tools/**",
-          "**/test/**"
+          "**/test/**",
+          "**/build-tools/**"
         ],
         "optionalDependencies": false,
         "peerDependencies": true
@@ -158,27 +178,8 @@
     "key-spacing": [
       "error"
     ],
-    "semi": [
-      "error",
-      "always"
-    ],
-    "quote-props": [
-      "error",
-      "consistent-as-needed"
-    ],
     "no-multiple-empty-lines": [
       "error"
-    ],
-    "max-len": [
-      "error",
-      {
-        "code": 150,
-        "ignoreUrls": true,
-        "ignoreStrings": true,
-        "ignoreTemplateLiterals": true,
-        "ignoreComments": true,
-        "ignoreRegExpLiterals": true
-      }
     ],
     "@typescript-eslint/no-floating-promises": [
       "error"
@@ -214,5 +215,16 @@
         ]
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        ".projenrc.js"
+      ],
+      "rules": {
+        "@typescript-eslint/no-require-imports": "off",
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
 }
