@@ -13,6 +13,7 @@
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
+    "eject": "npx projen eject",
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
@@ -46,7 +47,7 @@
     "json-schema": "^0.4.0",
     "memory-streams": "^0.1.3",
     "npm-check-updates": "^12",
-    "projen": "^0.51.14",
+    "projen": "^0.52.0",
     "standard-version": "^9",
     "ts-jest": "^27.1.3",
     "typescript": "^3.9.10"
