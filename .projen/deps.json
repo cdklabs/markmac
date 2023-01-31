@@ -46,10 +46,6 @@
       "type": "build"
     },
     {
-      "name": "json-schema",
-      "type": "build"
-    },
-    {
       "name": "memory-streams",
       "type": "build"
     },
