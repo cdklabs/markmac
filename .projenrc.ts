@@ -18,7 +18,7 @@ const project = new typescript.TypeScriptProject({
     secret: 'GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
-  defaultReleaseBranch: 'master',
+  defaultReleaseBranch: 'main',
 });
 
 project.synth();
