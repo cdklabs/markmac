@@ -1,7 +1,8 @@
-const { typescript } = require('projen');
+import { typescript } from 'projen';
 
 const project = new typescript.TypeScriptProject({
   name: 'markmac',
+  projenrcTs: true,
   releaseToNpm: true,
   authorName: 'Elad Ben-Israel',
   repository: 'https://github.com/eladb/markmac.git',
@@ -12,7 +13,6 @@ const project = new typescript.TypeScriptProject({
   devDeps: [
     'memory-streams',
   ],
-  projenUpgradeSecret: 'PROJEN_GITHUB_TOKEN',
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
     secret: 'GITHUB_TOKEN',
