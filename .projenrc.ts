@@ -1,6 +1,9 @@
-import { typescript } from 'projen';
+import { CdklabsTypeScriptProject } from 'cdklabs-projen-project-types';
 
-const project = new typescript.TypeScriptProject({
+const project = new CdklabsTypeScriptProject({
+  setNodeEngineVersion: false,
+  stability: 'stable',
+  private: false,
   name: 'markmac',
   projenrcTs: true,
   releaseToNpm: true,
