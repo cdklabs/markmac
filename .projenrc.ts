@@ -22,6 +22,7 @@ const project = new CdklabsTypeScriptProject({
   },
   autoApproveUpgrades: true,
   defaultReleaseBranch: 'main',
+  enablePRAutoMerge: true,
 });
 
 project.synth();
